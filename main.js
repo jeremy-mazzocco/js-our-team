@@ -1,3 +1,6 @@
+const selectContainer = document.getElementById('container');
+
+
 const arrayMembriDelTeam = [
     {
         "nome": "Wayne Barnett",
@@ -29,10 +32,27 @@ const arrayMembriDelTeam = [
         "ruolo": "Graphic Designer",
         "foto": "barbara-ramos-graphic-designer.jpg"
     }
-]
+];
+
+// console.log(wayne.nome, wayne.ruolo, wayne.foto);
+// selectContainer.innerHTML = wayne.nome;
+// selectContainer.innerHTML += wayne.ruolo;
+// selectContainer.innerHTML += wayne.foto;
 
 for (let i = 0; i < arrayMembriDelTeam.length; i++) {
-    console.log(arrayMembriDelTeam[i]);
+
+    const indiceArray = arrayMembriDelTeam[i];
+
+    for (let key in indiceArray) {
+        const indiceObject = indiceArray[key];
+
+        // scrivi console
+        console.log(indiceObject);
+
+        // scrivi sul DOM
+        selectContainer.innerHTML += indiceObject;
+
+    }
 }
 
 
